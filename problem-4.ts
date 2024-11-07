@@ -1,32 +1,27 @@
-// Define a union type Circle and Rectangle, where each type has a unique shape property. Create a function calculateShapeArea that uses type guards to calculate the area based on the shape type.
-
-// // Sample Input 1:
-// const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
-
 type Circle = {
-    shape: string;
+    shape: "circle";
     radius: number;
 }
 
 type Rectangle = {
-    shape: string;
+    shape: "rectangle";
     width: number;
     height: number
 }
-type Area = Circle | Rectangle
 
-const calculateShapeArea = (area: Circle | Rectangle) => {
-    const circleArea = `Math.PI * ${area.radius} * ${area.radius}`
-    const rectangleArea = rectangle.height * rectangle.width
-    const circleAreaTwoFixed = circleArea.toFixed(2)
-    const circleAreaInNumber = parseFloat(circleAreaTwoFixed)
+const calculateShapeArea = (structure: Circle | Rectangle): number => {
+    if (structure.shape === "circle") {
+        const areaShapeOfCircle = Math.PI * structure.radius * structure.radius
+        return parseFloat(areaShapeOfCircle.toFixed(2));
+    }
+    else if (structure.shape === "rectangle") {
+        const areaOfRectangleShape = structure.height * structure.width
+        return areaOfRectangleShape
+    }
+    else {
+        throw new Error('Unkown shape')
+    }
+
 }
 
-const circleArea = calculateShapeArea({ shape: "circle", radius: 5 })
-const rectangleArea = calculateShapeArea({
-    shape: "rectangle",
-    width: 4,
-    height: 6,
-});
-console.log(circleArea);
 
