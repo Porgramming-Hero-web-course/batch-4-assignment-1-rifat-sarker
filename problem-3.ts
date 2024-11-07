@@ -1,8 +1,16 @@
-const countWordOccurrences = (sentences : string, word: string) => {
-    let count = 0
-    
-   
+const countWordOccurrences = (sentences: string, word: string) => {
+    let count: number = 0
+    let allWord = sentences.toLowerCase().split(" ")
+    const inputWord = word.toLowerCase()
+    for (let i = 0; i < allWord.length; i++) {
+        const EachWord = allWord[i]
+        if (EachWord == inputWord) {
+            count++
+        }
+    }
+    return count
+
 }
 
-const result = countWordOccurrences("Hello Hello I am rifat", "Hello")
-console.log(result);
+// const result = countWordOccurrences("I love Typescript typescript typescript", "TYpescript");
+// console.log(result);
