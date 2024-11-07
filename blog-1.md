@@ -1,6 +1,6 @@
 ## The significance of union and intersection types in Typescript
 
-## What is Union Types?  ('|')
+## What is Union Types?  (' | ')
 Union types allow to hold multiple types. It is useful when you want to define a variable that can accept multiple types. But at a time it will accept one type.In TypeScript, a union type is defined using the pipe symbol (|)
 
 ### Example
@@ -18,7 +18,7 @@ printId(true);    // error because it's boolean
 
 - **Better Type Safety**: Union types help avoid runtime errors by ensuring that the variable can only be assigned values of the specified types.
 
-## What is Intersection Types? ('&')
+## What is Intersection Types? (' & ')
 An intersection type combines multiple types into one. You have to fulfill all the conditions. They are defined using the ampersand (&) symbol.
 
 ### Example
@@ -33,9 +33,9 @@ interface Admin {
 }
 
 let adminUser: User & Admin = {
-  name: "John",
-  age: 30,
-  role: "Administrator"
+  name: "Rifat Sarker",
+  age: 24,
+  role: "admin"
 };
 
 ```

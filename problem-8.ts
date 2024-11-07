@@ -9,7 +9,3 @@ const validateKeys = (obj: object, keys: string[]): boolean => {
   return allExistsProperty
 }
 
-
-// Sample Input:
-// const person = { name: "Alice", age: 25, email: "alice@example.com" };
-// console.log(validateKeys(person, ["name", "email", "age"]));

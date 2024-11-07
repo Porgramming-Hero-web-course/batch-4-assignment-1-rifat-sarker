@@ -8,5 +8,4 @@ const removeDuplicates = (arr: number[]) => {
     return uniqueElements
 
 }
-// const result = removeDuplicates([12, 4, 5, 21, 3, 4, 4, 5, 1])
-// console.log(result);
+
