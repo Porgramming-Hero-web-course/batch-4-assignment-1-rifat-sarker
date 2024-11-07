@@ -4,14 +4,16 @@ interface Profile {
     email: string;
 }
 
-interface UpdateProfile extends Profile {
+// type PartialUpdates<T> = {
+//     [P in keyof T]?: T[P]
+// }
 
+const updateProfile = (obj: Profile, partialObj: Partial<Profile>) => {
+    const updateProfile = Object.assign({}, obj, partialObj)
+    console.log(partialObj);
+    return updateProfile
 }
 
-const updateProfile = <T, Y extends keyof T>(param: T, update: Y) => {
-    return update
-}
 
-
-const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
-console.log(updateProfile(myProfile, { age: 30 }));
+// const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
+// console.log(updateProfile(myProfile, { age: 26 }));
