@@ -8,7 +8,7 @@ interface Profile {
 //     [P in keyof T]?: T[P]
 // }
 
-const updateProfile = (obj: Profile, partialObj: Partial<Profile>) => {
+const updateProfile = (obj: Profile, partialObj: Partial<Profile>):Profile => {
     const updateProfile = Object.assign({}, obj, partialObj)
     console.log(partialObj);
     return updateProfile
